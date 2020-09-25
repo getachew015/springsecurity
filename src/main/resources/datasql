@@ -1,0 +1,54 @@
+DROP TABLE IF EXISTS user_tbl;
+  
+CREATE TABLE user_tbl (
+  user_Name VARCHAR(250) NOT NULL,
+  user_Id LONG PRIMARY KEY,
+  user_Role VARCHAR(250) NOT NULL,
+  user_Email VARCHAR(250) DEFAULT NULL,
+  user_Password VARCHAR(250) NOT NULL,
+  hire_Date VARCHAR(250) NOT NULL
+);
+
+insert into user_tbl
+(user_Name, user_Id, user_Role, user_Email, user_Password, hire_Date)
+values
+('Mike Ellison', 876233, 'Admin', 'mike.elison@appauth.com','mike123' ,'07/13/2020'),
+('Dave Peterson', 376933, 'Sales', 'dave.peterson@appauth.com','dave123' ,'07/23/2019'),
+('Becca Lubow', 506233, 'Admin', 'becca.lubow@appauth.com','becca123' ,'02/04/2020'),
+('Tommy Teresse', 176233, 'Manager', 'tommy.teresse@appauth.com','tommy123' ,'05/16/2019');			
+
+Json Input
+[
+	{
+	"userId":176233,
+	"userName":"Tommy Teresse",
+	"userRole":"MANAGER,SALES",
+	"userEmail":"tommy.teresse@appauth.com",
+	"userPassword":"tommy123",
+	"hireDate":"05/16/2019"    
+	},
+	{
+	"userId":436233,
+	"userName":"Mike Elison",
+	"userRole":"ADMIN",
+	"userEmail":"mike.elison@appauth.com",
+	"userPassword":"mike123",
+	"hireDate":"11/16/2014"    
+	},
+	{
+	"userId":916233,
+	"userName":"Jhon Dickson",
+	"userRole":"USER",
+	"userEmail":"jhon.dickson@appauth.com",
+	"userPassword":"jhon123",
+	"hireDate":"05/16/2018"    
+	},
+	{
+	"userId":816270,
+	"userName":"Marry Lawrence",
+	"userRole":"ADMIN",
+	"userEmail":"marry.lawrence@appauth.com",
+	"userPassword":"marry123",
+	"hireDate":"06/16/2017"    
+	}
+]
